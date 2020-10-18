@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<?php
+	include_once "connectify.php";
+	 $query1 = "SELECT * FROM blog order by id desc  LIMIT 3 ";
+  	 $result1 = mysqli_query($con,$query1);
+?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Greenlab Microfactory</title>
+   <link rel="icon" href="img/logoe.png">
+    <style type="text/css">
+      body{
+      	overflow-x: hidden;
+      }
+    	.shop{
+    		
+    	}
+    	.shop:hover{
+    		text-decoration: underline;
+    		transition:800ms;
+    		font-weight:bold
+    	}
+
+    	.view{
+    		border:none;
+    		border-radius:5px;
+    		padding:10px 50px 10px 50px;
+    	}
+    	.shops{
+    		border: 1.2px solid green; border-radius:10px; margin-right:30px; max-width:29.5%;
+    		margin-bottom: 10px;
+    		height: 480px;
+    		box-shadow: 2px 2px 07px black;
+    	}
+
+
+
+    	#myVideo {
+    /*position: fixed;*/
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.meet{
+	color:white;
+}
+.newsimage{
+	
+	width:320px;
+	height:180px;
+	border-radius: 5px;
+}
+.news{
+	float:left;
+	width:30%;
+	margin-right:30px;
+	padding:20px 10px 20px 10px;
+	height:600px;
+	margin-bottom: 10px;
+}
+
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+
+
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrap
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+
+/*
+ *  STYLE 7
+ */
+
+
+.good{
+	color:rgb(31,234,143);
+	font-size: 3em;
+	font-weight:bold;
+	position: relative;
+	top:-270px;
+	line-height: 80px;
+}
+.margin{
+	margin-top:-200px;
+}
+.gif{
+	display: none;
+}
+.green{
+	display: block;
+	position: relative;
+	top: 40px;
+}
+
+.implement{
+	margin-top: 0px;
+}
+.logo{
+	position:relative; top: -22px;
+}
+.about-font{
+ 	float:none;
+	padding:10px;
+	font-size: 16px; 
+	border-radius:05px;  
+	color:green;
+}
+#text{
+	border-radius:05px;
+	height:470px;
+}
+#rise{
+	position:relative;
+	text-align: justify;
+    text-justify: inter-word;
+    top:-15px; 
+    left: 5px;
+    width: 50%;
+	float:left;
+
+}
+
+
+
+.rises{
+	width: 50%;
+	float:left;
+}
+
+
+    	@media screen and (max-width: 768px){
+    		.shops{
+    		border: 1px solid green; border-radius:5px;  margin-right:0px; max-width: 100%;margin-bottom:80px;
+    	}
+    	.hide{
+    		display: none;
+    	}
+    	#rise{
+    		position:relative; text-align: justify;
+    text-justify: inter-word; top:15px; left: 0px;
+    float: none;
+    width: 100%;
+
+    	}
+    		#rises{
+    		position:relative; text-align: justify;
+    text-justify: inter-word; top:15px; left: 0px;
+    float: none;
+    width: 100%;
+    
+    	}
+    	.texts{
+    		font-size:1.2em;
+    		line-height:30px;
+    		width:100%;
+    	}
+    	#text{
+	border-radius:05px;
+	height:200px;
+}
+
+
+
+    	.about-font{
+	padding:10px;
+	font-size: 14px; 
+	border-radius:05px;  
+	color:green;
+}
+    	.logo{
+    		position:relative; top: -25px;
+    	}
+    	.lab{
+    		display: none;
+    	}
+    	.green{
+	display: block;
+	position: relative;
+	top: 220px;
+	/*background-color: white;
+	height: 300px;
+*/}
+    	.newsimage{
+	
+	width:250px;
+	height:180px;
+	border-radius: 5px;
+}
+
+.implement{
+	margin-top: 155px;
+}
+
+.margin{
+	margin-top:-400px;
+}
+.gif{
+	display: block;
+	padding-top:62px; 
+
+}
+.gif img{
+	box-shadow:3px 3px  10px;
+}
+
+.good{
+	color:rgb(31,234,143);
+	font-size: 2.5em;
+	font-weight:bold;
+	position: relative;
+	top:-500px;
+	line-height: 60px;
+}
+    	#myVideo{
+    		display: none;
+    		
+    		padding-top: 60px;
+    		/* position: relative;*/
+
+    /*right: 0;
+    bottom: 0;*/
+    min-width: 100%; 
+    min-height: 100%;
+    	}
+    	.news{
+	float:none;
+	width:100%;
+	
+	
+	padding:10px;
+	max-height:500px;
+}
+    	.meet{
+	color:black;
+}
+
+    	}
+
+    	#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+
+
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrap
+{
+	text-align: center;
+	
+	
+}
+.counter-section{
+	/* margin: 10% auto; */
+	color: #20ea8f;
+}
+.text-center{
+	background-color:white;
+}
+.icon-box{
+	border:50px solid #20ea8f;
+	border-radius: 100%;
+	height: 100px;
+	width: 100px;
+	margin: 20px auto;
+	text-align: center;	
+	transform: rotate(45deg);
+}
+.icon-box .fa{
+	font-size: 40px;
+	margin: -2px auto;
+	margin-top: -2000px;
+	margin-left: -20px;
+	margin-bottom: 20px;
+	color: #fff;
+	transform: rotate(-45deg);
+
+}
+.counter-box p{
+	font-size: 20px;
+}
+.counter-box .counter{
+	font-size: 80px;
+	text-align: center;
+}
+
+.counter-text{
+	color:#20ea8f;
+	text-align: center;
+
+
+
+/*
+ *  STYLE 7
+ */
+
+
+
+    	@media screen and (max-width: 300px){
+    		.newsimage{
+	
+	width:210px;
+	height:130px;
+	border-radius: 5px;
+}
+.implement{
+	margin-top: 175px;
+}
+    	}															
+    </style>
+
+
+    <style>
+/* width */
+
+</style>
+    
+	
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
+	<link href="css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+	<link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/green.css" rel="stylesheet">
+     <link href="css/styles.css" rel="stylesheet">
+
+	<!-- boxed bg -->
+	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+	<!-- template skin -->
+	<!-- <link id="t-colors" href="color/default.css" rel="stylesheet"> -->
+	<style type="text/css">
+    	.active{
+    		color:green;
+
+    		}
+    	@media screen and (max-width: 300px){
+    			.about_us{
+    				/*background-color: red;*/
+    			}
+				}
+    </style>
+	  <script>
+      /*!
+* jquery.counterup.js 1.0
+*
+* Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
+* Released under the GPL v2 License
+*
+* Date: Nov 26, 2013
+*/(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
+  </script>
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<div style="display: none;">
+	<audio controls="loop" autoplay repeat >
+	<source src="ogun.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div id="wrapper">
+	
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<!-- <div class="top-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+					<p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
+					</div>
+					<div class="col-sm-6 col-md-6">
+					<p class="bold text-right">Call us now +62 008 65 001</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+        <div class="container navigation">
+		
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.php">
+                    <img src="img/logo.png" alt="" class="logo" style="" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active" style=""><a href="#intro">Home</a></li>
+				<li><a href="#service">About GreenLabs</a></li>
+				<li><a href="#doctor">Meet Our Team</a></li>
+				<li><a href="events.php">Events/Publications</a></li>
+				<li><a href="map" target="_blank">Socials</a></li>
+				<li><a href="greenmarket" target="_blank">Green Market</a></li>
+				<li style=""><a href="blog" target="_blank" style="border: 2px solid rgb(31,234,143); padding:10px 20px 20px 10px; background-color:rgb(31,234,143); color:white; text-align: center; border-radius:15px;  width: 100px; "> <span style="position: relative; left:05px; top:3px;">News</span></a></li>
+				
+			  </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+
+	<!-- Section: intro -->
+
+	<div style="padding-top:10px;">
+			<video class="vid" autoplay muted loop id="myVideo" width="100%">
+		  <source src="vid.mp4" type="video/mp4">
+		  
+
+		  
+</video>
+</div>
+<div class="gif" style="margin-bottom:0px; ">
+		  	<center><img src="img/gif.gif" width="100%"  height="190px" style="border-radius:;"></center>
+		  </div>
+	<div class="good">
+	<!-- <center><p><marquee>We don't just innovate, we Greenovate!!!</marquee></p></center> -->
+
+	<div></div>
+	</div>
+    <section id="intro" class="intro margin green"  >
+		<div class="intro-content ">
+			<div class="container">
+				<div class="row">
+				<!-- <div>
+					<div class="col-lg-6">
+					<!-- <div class="wow fadeInDown" class="lab" data-wow-offset="0" data-wow-delay="0.1s">
+					<h1 class="h-ultra lab">Green Lab Microfactory</h1>
+					</div> -->
+					<!-- <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+					<h4 class="h-light lab">
+					<!-- Provide <span class="color" style="color:green;" >best quality healthcare</span> for you -->
+						<!-- Mandate of <span class="color" style="color:rgb(31,234,143);" >GreenLab Microfactory</span>   
+					</h4>
+					</div> -->
+						<!-- <div class="well well-trans">
+						<div class="wow fadeInRight" data-wow-delay="0.1s">
+
+						<ul class="lead-list" style="margin-top: 15px;">
+							<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Workshop</strong><br />Conduct 10 Open Source workshops by 2019 for great minds to learn.</span></li>
+							<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Project</strong><br /> Building energy sustaining open sourced digital fabrication tools </span></li>
+							<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Service</strong><br />Serve over 10,000 people within three years of commencement<br></span></li>
+						</ul> -->
+
+						<!-- </div>
+						</div> -->
+
+<!-- 
+					</div> --> 
+
+					</div>
+									
+				</div>		
+			</div>
+		</div>		
+    </section>
+	
+	<!-- /Section: intro -->
+
+	<!-- Section: boxes -->
+    <section id="boxes" class="home-section paddingtop-80 implement " style="position: relative; top:-32px;" >
+	
+		<div class="container" style="margin-top: -40px;"   >
+			<div class="row" >
+				<div class="col-sm-3 col-md-3" >
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							
+							<i class="fa fa-check fa-3x circled bg-skin"  style="background-color:rgb(31,234,143);;" ></i>
+							<h4 class="h-bold">Workshop</h4> 
+							<p>
+							Conduct 10 free Open Source workshops by 2022 for great minds to learn and implement.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							
+							<i class="fa fa-list-alt fa-3x circled bg-skin"  style="background-color:rgb(31,234,143);"></i>
+							<h4 class="h-bold">Building</h4>
+							<p>
+							Successfully build energy sustaining open sourced digital fabrication equipment (e.g, Laser cutter, 3D printer, Milling machine).
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							<i class="fa fa-user-md fa-3x circled bg-skin"  style="background-color:rgb(31,234,143);"></i>
+							<h4 class="h-bold">Service</h4>
+							<p>
+							Serve at least 100,000 people within five years of commencement with satisfaction.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							
+							<i class="fa fa-hospital-o fa-3x circled bg-skin"  style="background-color:rgb(31,234,143);"></i>
+							<h4 class="h-bold">Developments</h4>
+							<p>
+							Replicate the GreenLab concept all over Nigeria, developing projects and strategies that promotes sustainable development.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- /Section: boxes -->
+	<div style="background-color:white">
+		<div class="container"  ><br>
+				<h2><p ><center style="color:black">No of Participants impacted so far...</center></p>	</h2>
+				<div class="container counter-section">
+			<div class="row">
+				<div class="col-md-3 counter-box">
+				<div class="icon-box"><i class="fa fa-child"></i></div><br>
+				<p class="counter">150</p>
+				
+				<p class="counter-text">MAKER EXHIBITION</p>
+				</div>
+
+				<div class="col-md-3 counter-box">
+				<div class="icon-box"><i class="fa fa-android"></i></div><br>
+				<p class="counter">100</p><br>
+				<p class="counter-text">ONE STUDENT <br> ONE ARDUINO</p>
+				</div>
+
+				<div class="col-md-3 counter-box">
+				<div class="icon-box"><i class="fa fa-briefcase"></i></div><br>
+				<p class="counter">20000</p><br>
+				<p class="counter-text">TICK STEM</p>
+				</div>
+
+				<div class="col-md-3 counter-box">
+				<div class="img-circle"></div>
+				<div class="icon-box"><i class="fa fa-globe"></i></div><br>
+				<p class="counter">400</p><br>
+				<p class="counter-text">COMMUNITY PROJECT</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	
+	
+	<section id="callaction" class="home-section paddingtop-40">	
+           <div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="callaction bg-gray">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="wow fadeInUp" data-wow-delay="0.1s">
+									<div class="cta-text">
+									<h3>Want to Participate?</h3>
+									<p>Do you have a primary or Junior Secondary School and you would like us to educate your pupils</p>
+									</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<center>
+										<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+										<div class="cta-btn">
+										<a href="mailto:info@greenlab-microfactory.org" class="btn btn-skin btn-lg" style= "background-color:rgb(31,234,143);">CONTACT US</a>	
+										</div>
+									</div>
+									</center>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+	</section>	
+	
+	
+
+	<!-- Section: services -->
+    <section id="service" class="home-section nopadding paddingtop-60">
+
+		<div class="container">
+
+        <div class="row">
+        <center><h2 style="color:black; padding: 10px; width:100%; " class="about_us"><b>About Us</b></h2></center>
+       	<center> <img src="img/tree.jpg" class="img-responsive"></center><br>
+       	<!-- <h2 style="color:green; text-align: center;" class="texts"><b><i>We don't just Innovate, we Greenovate!!!</i></b></h2> -->
+			<div class="col-sm-6 col-md-6" id="rises" >
+				<div class="wow fadeInUp" data-wow-delay="0.2s">
+				<img src="img/day3/7.jpg" class="img-responsive" id= "text" style="" alt="" / style="">
+				</div>
+            </div>
+
+			<div class="about-font"  id="rise"  >
+				
+				 The rise of the technology era, and the persistent social, economic, and environmental sustainability issues in the developing economies especially in their rural settings indicated the need for a different approach to ensure sustainability and broad empowerment of individuals irrespective of their educational, geographical, and anthropological status. GreenLab Microfactory, the first fablab in Nigeria will promote a green, eco-friendly, and sustainable environment, through research and development, education and training, technological and innovation awareness, and other human capital development projects.
+
+The aim of GreenLab is to encourage small-scale development of valuable artefacts, by providing access to digital fabrication tools and technologies that encourages learning, rapid prototyping, ideation, innovation, and small scale development of artefacts. The sole purpose of GreenLab is to provide sustainable and simple solutions to complex social problems, right from the rural level, to the provincial level, and lastly to the national level. Thereby eliminating the impending issues from their source, by utilizing the available and abundant resources present within the communities the GreenLab is planted.
+
+GreenLab is based on the platform of openness which means collaboration with other micro-factories is essential, also the innovative outcome of the GreenLab will be available for any individual or organization to use and further develop.<br class="hide"> 
+
+
+            </div>
+						
+        </div>		
+		</div><br><br>
+			<h2 style="color:green; text-align: center;" class="texts"><b><i>We don't just Innovate, we Greenovate!!!</i></b></h2><br>
+
+	</section>
+	<!-- /Section: services -->
+	
+
+	<!-- Section: team -->
+    <section id="doctor" class="home-section bg-gray paddingbot-60 img-responsive tree" >
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2" >
+					<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+
+					<h2 class="h-bold meet" ><br class="hide">Meet our Team</h2> 
+
+					<p class="meet" >Our Team of trainers and developers<br> </p>
+					</div>
+					</div>
+					<div class="divider-short"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container" >
+			<div class="row">
+				<div class="col-lg-12">
+				
+            <!-- div id="filters-container" class="cbp-l-filters-alignLeft">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"  style="background-color:rgb(31,234,143);">All (<div class="cbp-filter-counter"></div>)</div>
+                <div data-filter=".cardiologist" class="cbp-filter-item" style="background-color:rgb(31,234,143); color:white">I O T (<div class="cbp-filter-counter"></div>)</div>
+                <div data-filter=".psychiatrist" class="cbp-filter-item" style="background-color:rgb(31,234,143); color:white">Embedded systems (<div class="cbp-filter-counter"></div>)</div>
+                <div data-filter=".neurologist" class="cbp-filter-item" style="background-color:rgb(31,234,143); color:white">Software (<div class="cbp-filter-counter"></div>)</div>
+            </div> -->
+		
+            <div id="grid-container" class="cbp-l-grid-team">
+                <ul>
+                    <li class="cbp-item psychiatrist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/1.jpg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <div class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Babasile Daniel<br><span style="color:white; font-weight:lighter;">Caretaker</span></div>
+                        <!-- <div class="cbp-l-grid-team-position">Visionary Founder</div> -->
+                    </li>
+
+                    <li class="cbp-item cardiologist" style="border-radius:15px;">
+                         <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap" >
+                                <img src="img/team/2.jpg" alt="" width="100%" >
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Antonia Akinola<br><span style="color:white; font-weight:lighter;">Projects Coordinator</span></div>
+                        <!-- <div class="cbp-l-grid-team-position">Projects Coordinator</div> -->
+                    </li>
+                    <li class="cbp-item cardiologist" style="border-radius:15px;">
+                         <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/bayo.jpg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>tes
+                        </a>
+                           <div class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Ogunranti Adebayo<br><span style="color:white; font-weight:lighter;">Greenovator</span></div>
+                    </li>
+
+                  
+                    <li class="cbp-item neurologist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/4.jpg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <a href="#" class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Kolawole  Oluwasegun<br><span style="color:white; font-weight:lighter;">Greenovator</span></a>
+                    </li>
+
+					 <li class="cbp-item neurologist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/ogiri.jpg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <a href="#" class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Onyemaechi Ogiri <br><span style="color:white; font-weight:lighter;">Legal adviser</span></a>
+                    </li>
+
+					<li class="cbp-item neurologist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/yuji.jpeg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <a href="#" class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Yuji Ogawa <br><span style="color:white; font-weight:lighter;">Project Advisor</span></a>
+                    </li>
+
+					<li class="cbp-item neurologist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/emah.jpeg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <a href="#" class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Agamini Emmanuel <br><span style="color:white; font-weight:lighter;">Intern</span></a>
+                    </li>
+
+                    <li class="cbp-item neurologist" style="border-radius:15px;">
+                        <a href="#doctor" class="cbp-caption ">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/alexander.jpg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <!-- <div class="cbp-l-caption-text">VIEW PROFILE</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                           <a href="#" class="cbp-singlePage cbp-l-grid-team-name" style="color:rgb(31,234,143); background-color: black; padding-top: 1.4%;">Akintaju Alexander <br><span style="color:white; font-weight:lighter;">Graphic Design</span></a>
+                    </li>
+
+                </ul>
+            </div>
+			</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- /Section: team -->
+
+	
+		
+	<!-- Section: works -->
+    <section id="facilities" class="home-section paddingbot-60">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+
+					<div >
+						<h2 class="h-bold" >Our Events and Publications</h2>
+					<p>These are some of the Shots from our programmes and we've got publications too for you to download </p>
+					
+					</div>
+					</div>
+					</div>
+
+					<div class="divider-short"></div>
+
+				</div>
+			</div>
+		</div>
+
+<div class="container">
+<div style="margin-left:10px;font-size:1.2em; line-height:30px;"> Shots from the  Greenlab-Microfactory Maker exhibition accompained with a 3D experience, held at Premier Hub  (Akure, Ondo state) to round up the One Student One Arduino programame in Akure. </div>	
+
+			
+			<div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12" >
+					<div class="wow bounceInUp" data-wow-delay="0.2s">
+                    <div id="owl-works" class="owl-carousel">
+                    	<div class="item"><a href="img/photo/3d1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/3d1.jpg" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                    	
+                    	<div class="item"><a href="img/photo/pic4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/pic4.jpg" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                    	<div class="item"><a href="img/photo/pic.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/pic.jpg" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                    	<div class="item"><a href="img/photo/guru.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/guru.jpg" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="img/photo/general.jpg title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/general.jpg" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="img/photo/3d2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/3d2.jpg"s style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="img/photo/3d3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/3d3.jpg"s style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="img/photo/2.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg"><img src="img/photo/2.png" style="border-radius: 10px;border:1px solid silver;" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="img/photo/3.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg"><img src="img/photo/3.png" style="border-radius: 10px;border:1px solid silver;" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="img/photo/4.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg"><img src="img/photo/4.png" style="border-radius: 10px;border:1px solid silver;" class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="img/photo/5.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg"><img src="img/photo/5.png" style="border-radius: 10px;border:1px solid silver; class="img-responsive " alt="img"></a></div>
+                        <div class="item"><a href="img/photo/6.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/6.png" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        <div class="item"><a href="img/photo/7.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/7.png" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                        
+                        <div class="item"><a href="img/photo/9.png" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/10.png" style="border-radius: 10px; border:1px solid silver;" class="img-responsive" alt="img"></a></div>
+                       <!--  <div class="item"><a href="img/photo/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg"><img src="img/photo/6.jpg" style="border-radius: 10px;border:1px solid silver; class="img-responsive " alt="img"></a></div> -->
+                    </div>
+					</div>
+                </div>
+            </div>
+
+            <div>
+            	<p><a href= "events.php" ><center> View more about our Programmes and Events</center></a></p>
+            </div>
+
+             	<div>
+            		
+            		<div class="pdf" >
+						<div >
+						<table>
+						<tr>
+							<td style="margin-right:50px;"><img src= "img/pdfs.png" style = "width:50px; height:50px;"></td>
+							<td><a href="publications/Cartooino Project Book.pdf" download style="text-decoration:underline;" >Cartooino Project Book for One Student One Arduino project [3.71 MB]</a><br>
+							This book is a cartoon adaptation of the Arduino project book. The essence is to provide a more relatable, understandable, and kid-friendly version of the Arduino project book.
+							</td></tr><br>
+							</table
+
+						</div>
+
+						
+
+						
+						
+
+				</div>
+
+
+					<div >
+						<table>
+						<tr>
+							<td style="margin-right:50px;"><img src= "img/pdfs.png" style = "width:50px; height:50px;"></td>
+							<td><a href="publications/Ajumose Report.pdf" download style="text-decoration:underline;" >Ajumose Report [1.7 MB]</a><br>
+							Summary of Ajumose's report<br>
+							</td></tr><br>
+							</table
+
+						</div>
+                          
+                          <div >
+						<table>
+						<tr>
+							<td style="margin-right:50px;"><img src= "img/pdfs.png" style = "width:50px; height:50px;"></td>
+							<td><a href="publications/kids.pdf" download style="text-decoration:underline;" >Kids Project 2019</a><br>
+							Summary of the Kids project 2019<br>
+							</td></tr><br>
+							</table
+
+						</div>
+
+						
+
+						
+						
+
+				</div>
+
+					<div >
+						<table>
+						<tr>
+							<td style="margin-right:50px;"><img src= "img/pdfs.png" style = "width:50px; height:50px;"></td>
+							<td><a href="publications/LaFT FabLab research report June 2015 - Babasile Daniel.pdf" download style="text-decoration:underline;" >LaFT FabLab research report June 2015 - Babasile Daniel [7.5 MB]</a><br>
+							GreenLab Microfactory - Final Ajumose report
+							</td></tr><br>
+							</table
+
+						</div>
+
+						
+
+						
+						
+
+				</div>
+
+				<div >
+						<table>
+						<tr>
+							<td style="margin-right:50px;"><img src= "img/pdfs.png" style = "width:50px; height:50px;"></td>
+							<td><a href="publications/Ajumose summary.pdf" download style="text-decoration:underline;" >Ajumose Summary [1.4 MB]</a><br>
+							LaFT FabLab research report June 2015 - [...] 
+							</td></tr><br>
+							</table
+
+						</div>
+
+						
+
+						
+						
+
+				</div>
+            	
+            	</div>
+            </div>
+		</div>
+	</section>
+	<!-- /Section: works -->
+	
+	
+
+	<!-- /Section: testimonial -->
+	
+
+	<!-- Section: pricing -->	
+	<section id="pricing" class="home-section bg-gray paddingbot-60">	
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+					<h2 class="h-bold">Reach us on </h2>
+					<p>You can reach us also on our social media pages</p>
+					</div>
+					</div>
+					<div class="divider-short"></div>
+				</div>
+			</div>
+		</div>
+           
+		   <div class="container">
+			
+			<div class="row">
+
+				<div class="col-sm-4 pricing-box">
+					<div class="wow bounceInUp" data-wow-delay="0.1s">
+					<center>
+						<div class="pricing-content general" style="width: 340px;">
+						<!-- <h2 style="background-color:skyblue;">Twitter</h2> -->
+						<!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreenLab.Microfactory%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden; " scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+						<!-- <h3>$33<sup>.99</sup> <span>/ one time</span></h3>
+						<ul>
+							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
+							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
+							<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
+							<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
+						</ul>
+
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
+						</div> -->
+
+						<div>
+							
+						</div>
+					</div>
+					</center>
+					</div>
+				</div>
+
+				<div class="col-sm-4 pricing-box featured-price" style="border-radius:10px;">
+					<div class="wow bounceInUp" data-wow-delay="0.3s">
+					<center>
+						<div class="pricing-content featured" style="width:340px;">
+						<h2 style="background-color: blue">Facebook</h2>
+						
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreenLab.Microfactory%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+						<!-- <h3>$65<sup>.99</sup> <span>/ one time</span></h3>
+						<ul>
+							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
+							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
+							<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
+							<li>Body Composition Analysis <i class="fa fa-check icon-success"></i></li>
+							<li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li>
+						</ul>
+
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
+						</div> -->
+					</div>
+					</center>
+					</div>
+				</div>
+
+				<div class="col-sm-4 pricing-box">
+					<div class="wow bounceInUp" data-wow-delay="0.2s">
+					<center>
+						<div class="pricing-content general last" style="width:340px;">
+						<!-- <h2  style="background-color: violet">Instagram</h2>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGreenLab.Microfactory%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden; " scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+						<!-- <h3>$47<sup>.99</sup> <span>/ one time</span></h3>
+						<ul>
+							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
+							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
+							<li>General Screening – Regular <i class="fa fa-check icon-success"></i></li>
+							<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
+						</ul>
+
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
+						</div> -->
+					</div>
+					</center>
+					</div>
+				</div>
+
+			</div>				
+				
+            </div>
+	</section>	 
+	<!-- /Section: pricing -->
+	
+	<section id="partner" class="home-section paddingbot-60">	
+	<!-- 	<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+					<h2 class="h-bold">Our partner</h2>
+					<p>We work hand in hand with some group of commpanies in this universe to achieve our goals</p>
+					</div>
+					</div>
+					<div class="divider-short"></div>
+				</div>
+			</div>
+		</div> -->
+		
+           <div class="container">
+				
+
+				<div  id="stores">
+					<strong>
+						<center style="font-size:2.2em;" class="shop">Shop Now</center><br>
+						<div  style="color:green; font-weight: lighter;">
+							<p>This is green Market, we've got a lot of product for you to purchase at cheaper prices, you don't have to do shipping of goods, it's right available here.</p><br>
+						</div>
+					</strong>
+
+
+
+
+
+
+
+
+					    <!-- <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5"> -->
+<center>
+	
+<div class="carousel-reviews broun-block" >
+
+    <div class="container" >
+        <div class="row" >
+            <div id="carousel-reviews2" class="carousel slide" data-ride="carousel" style="margin-bottom: 10px;">
+            
+                <div class="carousel-inner" >
+                    <div class="item active">
+                	    <div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="img/product/1.jpg" class="" style="border-radius:10px;  border: 1px solid green; width:100%" ></center><br>
+						        <strong style="color:black;">Fabrication components such as Arduino, Makey Makey, STEM learning Kits, are available at affordable prices </strong><br>
+						        <strong style="color:black;"></strong>
+						       <!--  <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span> -->
+					        </div>
+							<div class="person-text rel text-light">					
+								<a href="mailto:info@greenlab-microfactory.org"><button class="btn btn-success"  data-toggle="modal"> Coming soon </button></a><br>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="img/product/2.jpg" class="img-responsive" style="border-radius:10px;  border: 1px solid green" ></center><br>
+						        <strong style="color:black;">TeeBot 3D Printer </strong></br>
+						        <strong style="color:black;">price: N80, 000 fully assembled </strong>
+						        <strong style="color:black;">price: N70, 000 for the DIY Kit</strong><br>
+						        <!-- <strong style="color:black;">$800</strong><br> -->
+						        <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span>
+					        </div>
+							<div class="person-text rel text-light">					
+								<a href="http://www.3dstuffs.nl" target="_blank"><button class="btn btn-success"  data-target="#myModal" data-toggle="modal">BUY NOW</button><br><br></a>
+							</div>
+						</div>
+
+						    <div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="greenmarket/images/new/duvet16.jpg" class="" style="border-radius:10px;  border: 1px solid green; width:100%" ></center><br>
+						        <strong style="color:black;">Duvet by Greenlab-Microfactory. </strong>
+						        
+						        <b>
+						        <div style="line-height: 30px;">King Duvet</div>
+						        <div style="line-height: 30px;">Double Duvet</div>
+						        <div style="line-height: 30px;">Single Duvet</div>
+						        </b>
+						       <!--  <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span> -->
+					        </div>
+							<div class="person-text rel text-light">					
+								<a href="greenmarket/#duvet"><button class="btn btn-success"  data-toggle="modal"> View More </button></a><br>
+							</div>
+						</div>
+						<!-- <div class="col-md-4 col-sm-6 shops" >
+        				     <div class="block-text rel zmin">
+						        <center><img src="img/product/1.jpg" class="" style="border-radius:10px;  border: 1px solid green; width:100%" ></center><br>
+						        <strong style="color:black;">Raw materials are available for you at affordable prices</strong><br>
+						        <strong style="color:black;"></strong><br>
+						        <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span>
+					        </div>
+							<div class="person-text rel text-light">					
+								<button class="btn btn-success"  data-target="#myModal" data-toggle="modal">BUY NOW</button><br><br>
+							</div>
+						</div> -->
+                    </div>
+                   <!--  <div class="item">
+                        	<div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="img/product/1.jpg" class="img-responsive" style="border-radius:10px;  border: 1px solid green"></center><br>
+						        <strong style="color:black;">Mac book  Air 8gb RAM, 8th Generation, SSD (400), 15.6-inch</strong><br>
+						        <strong style="color:black;">$800</strong><br>
+						        <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span>
+					        </div>
+							<div class="person-text rel text-light">					
+								<button class="btn btn-success"  data-target="#myModal" data-toggle="modal">BUY NOW</button><br><br>
+							</div>
+						</div>
+						
+            			<div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="img/product/1.jpg" class="img-responsive" style="border-radius:10px;  border: 1px solid green"></center><br>
+						        <strong style="color:black;">Mac book  Air 8gb RAM, 8th Generation, SSD (400), 15.6-inch</strong><br>
+						        <strong style="color:black;">$800</strong><br>
+						        <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span>
+					        </div>
+							<div class="person-text rel text-light">					
+								<button class="btn btn-success"  data-target="#myModal" data-toggle="modal">BUY NOW</button><br><br>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 shops" >
+        				    <div class="block-text rel zmin">
+						        <center><img src="img/product/1.jpg" class="img-responsive" style="border-radius:10px;  border: 1px solid green"></center><br>
+						        <strong style="color:black;">Mac book  Air 8gb RAM, 8th Generation, SSD (400), 15.6-inch</strong><br>
+						        <strong style="color:black;">$800</strong><br>
+						        <span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class="glyphicon glyphicon-star" style="color:gold;"></span><span class=" 	glyphicon glyphicon-star-empty" style="color:gold;"></span>
+					        </div>
+							<div class="person-text rel text-light">					
+								<button class="btn btn-success"  data-target="#myModal" data-toggle="modal">BUY NOW</button><br><br>
+							</div>
+						</div>
+                    </div> -->
+                    
+                   
+                </div>
+				
+                <a class="left carousel-control" href="#carousel-reviews2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-reviews2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <br><br>
+            <div> <center>
+            	
+
+           <a href="greenmarket" target="_blank"> <button type="button" class="btn btn-success btn-lg ">Visit Green Market</button></a>
+
+
+            
+
+              <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog" style="position:relative; top:100px; " >
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="padding:10px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h3 style="color:green">Green Market</h3>
+        </div>
+       	<div>
+       		<br>
+       		<p style="font-size: 2em">Coming Soon !!!</p>
+       		We present to you, Green Market, we sell all fabrication materials for the packaging of  our locally made goods here.
+       		We look forwasrd to seeing a better  Nigeria.
+       		The Green market is still in progress.<br><br><br>
+       	</div>
+
+        
+		<center>
+	          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button><br><br>
+
+		</center>        
+      </div>
+      
+    </div>
+  </div>
+
+            </center></div>
+        </div>
+
+
+     <section id="updates" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
+
+	<center>
+		
+ 			 <div id= "" >
+             	<h2>OPEN TECH UPDATES</h2>
+             </div>
+
+             
+
+
+
+		<!-- <div id="wrap"> -->
+   
+
+   <!--  <div class="scrollbar" id="style-7">
+      <div class="force-overflow"></div> -->
+      <!-- <div id="feeds">
+      	
+      </div> -->
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+    <!--  <div id="wrap">
+   
+
+    <div class="scrollbar" id="style-7">
+      <div class="force-overflow">
+      	
+      </div>
+    </div>
+
+    </div> -->
+   <!--  <div id="feeds">
+      		
+      	</div> -->
+      	
+
+      	<div class =  "feedings" >
+    			 <?php 
+          while ($row1 = mysqli_fetch_assoc($result1)){
+           echo '<div class= "news" style = "border-radius:10px;box-shadow: 3px 3px 10px silver;">
+    				<center>
+    					<img src = " '.$row1["image"].' " class = "newsimage img-responsive ">
+    				</center><br>
+
+    				<div >
+    					<a href = "'.$row1["link"].'" style= "font-weight:bold; text-align: justify;
+    text-justify: inter-word;" > '.$row1["title"].' </a>
+    				</div><hr style = "color:black">
+    				<div>
+    					'.$row1["content"].'
+    				</div><br>
+    				<div>
+    					<a href = "'.$row1["link"].'"><button class = "btn btn-success" >Go to Page</button></a>
+    				</div>
+    				
+    			</div>';
+           }
+           ?>
+    			
+    		</div>
+
+
+
+
+      	<a href="blog.php" style="text-decoration:underline; position: relative; top: 30px;"><br>
+      	             	<p>View More Updates</p><br><br>
+             </a>
+
+
+	</center>
+
+
+	<div>
+		<center>
+			<div class="col-lg-12">
+						<div class="form-wrapper">
+						<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+						
+							<div class="panel panel-skin">
+							<div class="panel-heading">
+									<h3 class="panel-title"><span class="fa fa-pencil-square-o" ></span>Contact US <small> </small></h3>
+									</div>
+									<div class="panel-body">
+									<form role="form" action="contact.php" class="lead" method="post">
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6">
+												<div class="form-group">
+													<label>Name</label>
+													<input type="text" name="name" id="Name" class="form-control input-md" >
+												</div>
+											</div>
+											<div class="col-xs-6 col-sm-6 col-md-6">
+												<div class="form-group">
+													<label>Email</label>
+													<input type="text" name="email" id="inputEemail" class="form-control input-md">
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12">
+												<div class="form-group" >
+													<label>Your Message</label>
+													<textarea id="inputEemail" style="height:100px;" name="comment" class="form-control input-md"></textarea>
+												</div>
+											</div>
+											
+										</div>
+										
+										<input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg" style="background-color:rgb(31,234,143);" >
+										
+										<p class="lead-footer">* We'll contact you by phone & email later</p>
+									
+									</form>
+								</div>
+							</div>				
+						
+						</div>
+						</div>
+					</div>	
+		</center>
+	</div>
+
+	</section>
+</div>
+</center>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+            </div>
+	</section>	
+	<div class="container">
+		
+		<div class="row">
+			
+		</div>
+	</div>
+
+	<footer>
+	
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-12 col-md-4">
+					<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="widget">
+						<h5>GreenLab Microfactory</h5>
+						<p>
+						Greenovation Starts from Within......
+						</p>
+						<ul>
+							<!-- <li>
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+								</span> Monday - Saturday, 8am to 10pm
+							</li> -->
+							<li>
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                              </span> <a href="tel:+2348092205588">+2348092205588</a>
+							</li>
+							<li>
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+								</span> info@greenlab-microfactory.org
+							</li>
+
+						</ul>
+					</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="widget">
+						<h5>Our location</h5>
+                        <p>House 5, Green Garage, Stateline, FUTA South Gate, Akure, Ondo state, Nigeria.</p>		
+                        
+                        <h5>Our Permanent Address </h5>
+						<p>Chief Amos Oyebola Street, Ashipa, Oleyo Road, Ibadan, Oyo state, Nigeria </p>		
+						
+					</div>
+					</div>
+					<div class="wow fadeInDown" data-wow-delay="0.1s">
+					<div class="widget">
+						<h5>Follow us</h5>
+						<ul class="company-social">
+								<li class="social-facebook"><a href="https://www.facebook.com/GreenLab.Microfactory/"><i class="fa fa-facebook"></i></a></li>
+								<li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+								<li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="wow fadeInLeft" data-wow-delay="0.1s">
+					<div class="text-left">
+					<p>&copy;Copyright 2018 - GreenLab Microfactory. All rights reserved.</p>
+					</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="wow fadeInRight" data-wow-delay="0.1s">
+					<div class="text-right">
+						<p><a href="mailto:Skolly150@gmail.com">Skolly Tech </a><a href="tel:08037685376"> 08037685376</a> </p>
+					</div>
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Medicio
+                    -->
+					</div>
+				</div>
+			</div>	
+		</div>
+		</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+	<!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>	 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/feeds.js"></script>
+
+</body>
+
+</html>
